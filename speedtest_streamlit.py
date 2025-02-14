@@ -11,8 +11,8 @@ def testar_velocidade():
                 s = speedtest.Speedtest()
                 s.get_best_server()
                 
-                download = s.download() / 1_000_000  # Mbps
-                upload = s.upload() / 1_000_000
+                download = s.download() / 1_000_00  # Mbps
+                upload = s.upload() / 1_000_00
                 ping = s.results.ping
                 
                 st.metric("Download", f"{download:.2f} Mbps")
